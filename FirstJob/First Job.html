@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Job</title>
+    <style type="text/css">
+        #myclock
+        {
+            margin: 0px auto;
+            border: 1px sandybrown solid;
+            background-color: #F4A460;
+            width: 300px;
+            height: 25px;
+        }
+    </style>
+    <script type="text/javascript">
+function showtime () {
+var myDate = new Date();
+var the_current_time="今天是"+myDate.getFullYear()+"年"+(myDate.getMonth()+1)+"月"+myDate.getDay()+"日"+myDate.getHours() +"时"+myDate.getMinutes()+"分"+myDate.getSeconds()+"秒"	;
+myclock.innerHTML = the_current_time;
+setTimeout("showtime()",1000);
+}
+    </script>
+</head>
+<body onload="showtime()">
+<div id = "myclock">
+
+</div>
+</body>
+</html>

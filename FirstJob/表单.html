@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <link rel="stylesheet" type="text/css" href="表单css.css">
+    <script type="text/javascript">
+function showResult ()
+{
+ if (document.getElementById("email").value =="")
+ {
+     alert("邮箱不能为空！");
+     return false;
+ }
+    if (document.getElementById("pwd").value == "")
+    {
+        alert("密码不能为空值");
+        return false;
+    }
+    if (!document.getElementById("server").checked)
+    {
+        alert("必须接受协议");
+        return false;
+    }
+    var flag = confirm("是否确定注册");
+    if (flag = true)
+    {
+        alert("恭喜你注册成功");
+    }else {
+        alert("你取消了注册-__-");
+    }
+}
+    </script>
+</head>
+<body style="background-color: burlywood">
+<div id="pic">
+    <div id="top">
+    <img src="image/top.png">
+        <font size="6" color="black">
+            代码网
+        </font>
+    </div>
+    <div id="mid">
+        <form >
+            <input type="text" id="email" name="email" placeholder="注册邮箱" />
+            <input type="text" id="pwd" name="pwd" placeholder="密码"/>
+            <input type="text" id="pwd2" name="pwd2" placeholder="确认密码"/>
+            <input type="text" id="user" name="user" placeholder="联系人"/>
+            <input type="text" id="company" name="company" placeholder="公司"/>
+            <input type="text" id="qq" name="qq" placeholder="QQ"/>
+            <div style="margin-top: 10px;float: left;margin-left: 65px" >
+                <input type="checkbox" id="server" /><span style="font-size: 12px;">我已阅读服务条款及政策法规</span>
+            </div>
+            <input type="button" value="注册" class="mybutton" onclick="showResult();" />
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
